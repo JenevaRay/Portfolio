@@ -1,23 +1,33 @@
 import React from 'react';
 
 export default function AboutMe(): JSX.Element {
+  const imgstyle = {
+    top: "-50px",
+    bottom: "-50px",
+    zIndex: "999",
+    cursor: "pointer",
+    transitionProperty: "all",
+    transitionDuration: "0.3s",
+    transitionTimingFunction: "ease",
+    width: "100%",
+    display: "block",
+    // maxHeight: "200px",
+    ObjectFit: "cover",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"
+  }
   return (
     <>
-      <h1>About Me</h1>
-      {/* <img>profile pic</img> */}
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
+      <h1>Jeneva Ray</h1>
+      <img src="/selfie.png" style={imgstyle}></img>
+      <ul>
+                <li>Needing precision work?  I&apos;ll take it on.  I come from a background in pharmacy, where every little thing matters.</li>
+                <li>I have a hunger to learn more, so that I can better help people.  Are you the right company for me?</li>
+                <li>I have experience with analysis from data analysis to formal analysis (a higher tier from static analysis)</li>
+                <li>I have experience with Cassandra NoSQL and administration, data parsers for very different information for information sources, use and storage</li>
+                <li>I have experience with multiple languages, including JavaScript and Python, and I actively administer Linux systems.</li>
+      </ul>
     </>
   );
 }

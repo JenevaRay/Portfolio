@@ -14,10 +14,17 @@ interface Props {
   image: string
   github: string
   htmlUrl: string
+  deployment: string
 }
 
 export default function Project(props: Props): JSX.Element {
-  const {title, description, image, github, htmlUrl} = props
+  const {title, description, image, github, htmlUrl, deployment} = props
+  let alert
+  if (deployment === "") {
+    alert = (<Alert variant="info"><a href={github}>Git Clone (Server-Size App)</a></Alert>)
+  } else {
+    alert = (<Alert variant='info'><a href={deployment}>Deployment</a></Alert>)
+  }
   return (
   <Card style={{ width: '18rem' }}>
     <Card.Img variant="top" src={image} />
@@ -25,9 +32,10 @@ export default function Project(props: Props): JSX.Element {
       <Card.Title>{title}</Card.Title>
       <Card.Text>{description}</Card.Text>
       <Button variant="primary" href={htmlUrl}>Github</Button>
-      <Alert variant='info'>
+      {alert}
+      {/* <Alert variant='info'>
         <a href={github}>Clone URL</a>
-      </Alert>
+      </Alert> */}
     </Card.Body>
   </Card>
   );

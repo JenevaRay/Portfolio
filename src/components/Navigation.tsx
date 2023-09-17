@@ -4,7 +4,7 @@ import { Contact, Portfolio, Resume, AboutMe } from './Pages'
 
 function Navigation(): JSX.Element {
     const style = {
-        backgroundColor: '#203a5c',
+        backgroundColor: '#003b1b',
         color: 'white',
         height: window.innerHeight
     }

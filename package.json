@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jenevaray.github.io/portfolio",
   "repository": {
     "url": "git+https://github.com/JenevaRay/portfolio.git"
   },
@@ -30,7 +31,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.ts,.jsx,.tsx src",
-    "format": "yarn run lint --fix & yarn prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "format": "npx lint --fix & npx prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 import Project from './Project';
 import axios, { AxiosResponse } from 'axios';
 import useAsyncEffect from 'use-async-effect';
-// import ecommerce from '../../../public/ecommerce-api.png'
 
 import { Repository, Repositories } from '../Types';
-// import ThemeProvider from 'react-bootstrap/ThemeProvider'
-// import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row';
 
 const getRepos = async (): Promise<Repository[]> => {
@@ -25,7 +22,7 @@ export default function Portfolio(): JSX.Element {
   const [data, setData] = useState<Repositories>([]);
   useAsyncEffect(async () => {
     const repos = await getRepos();
-    console.log(repos);
+    // console.log(repos);
     setData(
       repos.filter((repo) => {
         return !repo.private;

@@ -1,10 +1,10 @@
 {
-  "name": "portfolio",
+  "name": "Portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jenevaray.github.io/portfolio",
+  "homepage": "https://jenevaray.github.io/Portfolio",
   "repository": {
-    "url": "git+https://github.com/JenevaRay/portfolio.git"
+    "url": "git+https://github.com/JenevaRay/Portfolio.git"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",

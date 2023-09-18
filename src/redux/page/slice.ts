@@ -13,8 +13,8 @@ export const pageSlice = createSlice({
   initialState,
   reducers: {
     setPage: (state, action: PayloadAction<string>) => {
-        state.page = action.payload
-    }
+      state.page = action.payload;
+    },
     // increment: (state) => {
     //   state.value += 1;
     // },
@@ -32,5 +32,4 @@ export const pageSlice = createSlice({
   },
 });
 
-export const { actions: pageActions, reducer: pageReducer } =
-  pageSlice;
+export const { actions: pageActions, reducer: pageReducer } = pageSlice;

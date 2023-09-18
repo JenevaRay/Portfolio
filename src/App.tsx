@@ -5,9 +5,9 @@ import React from 'react';
 // import { useAppDispatch, useAppSelector } from './redux/hooks';
 // import { counterActions } from './redux/counter/slice';
 
-import Header from './components/Header'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
+import Header from './components/Header';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 function App(): JSX.Element {
   // const dispatch = useAppDispatch();

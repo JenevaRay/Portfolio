@@ -21,7 +21,7 @@ export default function AboutMe(): JSX.Element {
   return (
     <div className="py-5">
       <h1>Jeneva Ray</h1>
-      <img src="/selfie.png" style={imgstyle} className="py-5"></img>
+      <img src="./selfie.png" style={imgstyle} className="py-5"></img>
       <ListGroup>
         <ListGroup.Item as="li" variant="forest" key={1}>
           Needing precision work? I&apos;ll take it on. I come from a background

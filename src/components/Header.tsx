@@ -16,9 +16,6 @@ const Header = (): JSX.Element => {
   const setPage = (page: string): void => {
     dispatch(pageActions.setPage(page));
   };
-  if (page === null) {
-    setPage('Portfolio');
-  }
   return (
     <Navbar expand="lg" className="header bd-body-tertiary">
       <Container>
@@ -28,44 +25,32 @@ const Header = (): JSX.Element => {
           <Nav className="me-auto">
             <Nav.Link
               href="#about-me"
-              // onClick={()=>handlePageChange('About Me')}
-              onClick={() => setPage('About Me')}
-              // className={currentPage === 'About Me' ? 'active' : ''}
-              className={page === 'About Me' ? 'active' : ''}
+              onClick={() => setPage('about me')}
+              className={page === 'about me' ? 'active' : ''}
             >
               About Me
             </Nav.Link>
             <Nav.Link
               href="#portfolio"
-              // onClick={()=>handlePageChange('Portfolio')}
-              onClick={() => setPage('Portfolio')}
-              // className={currentPage === 'Portfolio' ? 'active' : ''}
-              className={page === 'Portfolio' ? 'active' : ''}
+              onClick={() => setPage('portfolio')}
+              className={page === 'portfolio' ? 'active' : ''}
             >
               Portfolio
             </Nav.Link>
             <Nav.Link
               href="#contact"
-              // onClick={()=>handlePageChange('Contact')}
-              onClick={() => setPage('Contact')}
-              // className={currentPage === 'Contact' ? 'active' : ''}
-              className={page === 'Contact' ? 'active' : ''}
+              onClick={() => setPage('contact')}
+              className={page === 'contact' ? 'active' : ''}
             >
               Contact
             </Nav.Link>
             <Nav.Link
               href="#resume"
-              // onClick={()=>handlePageChange('Resume')}
-              onClick={() => setPage('Resume')}
-              // className={currentPage === 'Resume' ? 'active' : ''}
-              className={page === 'Resume' ? 'active' : ''}
+              onClick={() => setPage('resume')}
+              className={page === 'resume' ? 'active' : ''}
             >
               Resume
             </Nav.Link>
-            {/* <NavDropdown title="" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#GitHub">GitHub</NavDropdown.Item>
-
-                        </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

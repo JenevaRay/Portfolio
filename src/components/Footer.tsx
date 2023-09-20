@@ -3,73 +3,13 @@ import React from 'react';
 // import Col from 'react-bootstrap/Col'
 // import { Github, Linkedin, StackOverflow } from 'react-bootstrap-icons'
 
-const style = (
-  <style type="text/css">
-    {`
-.wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 200px;
-    background-image: linear-gradient(to bottom right, #623412, #e59e6d);
-    transition: all 0.4s ease-out;
-}
-.wrapper__links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-}
-.social-link--linkedin {
-    color: #2d76b0;
-}
-.social-link--github {
-    color: #000;
-}
-.social-link .social-svg {
-    width: 8rem;
-    height: 8rem;
-}
-.social-link .social-svg .social-group__icon {
-    fill: #191308;
-    transition: all 0.2s;
-}
-.social-link .social-svg .social-group__inner-circle {
-    fill: transparent;
-    transition: all 0.2s;
-}
-.social-link .social-svg .social-group__outline {
-    stroke: #191308;
-    transform-origin: 50% 50%;
-    transition: all 0.2s;
-}
-.social-link .social-svg:hover .social-group__icon, .social-link .social-svg:active .social-group__icon, .social-link .social-svg:focus .social-group__icon {
-    fill: #fffbfa;
-    transition: all 0.45s;
-}
-.social-link .social-svg:hover .social-group__inner-circle, .social-link .social-svg:active .social-group__inner-circle, .social-link .social-svg:focus .social-group__inner-circle {
-    fill: currentColor;
-    transition: all 0.45s;
-}
-.social-link .social-svg:hover .social-group__outline, .social-link .social-svg:active .social-group__outline, .social-link .social-svg:focus .social-group__outline {
-    stroke: currentColor;
-    transform: scale(1.1);
-    transition: all 0.45s;
-}
-
-`}
-  </style>
-);
-
 const Footer = (): JSX.Element => {
   return (
     // source: https://codepen.io/frebliklo/pen/YeqaNB
     <div style={{ bottom: '0', height: '60' }} className="footer py-3">
-      {style}
       <div className="wrapper">
         <div className="wrapper__links">
-          <a className="social-link social-link--github" id="github">
+          <a className="social-link social-link--github" id="github" href='https://github.com/JenevaRay'>
             <svg
               className="social-svg"
               viewBox="0 0 600 600"
@@ -101,7 +41,7 @@ const Footer = (): JSX.Element => {
               </g>
             </svg>
           </a>
-          <a className="social-link social-link--linkedin" id="linkedin">
+          <a className="social-link social-link--linkedin" id="linkedin" href='https://www.linkedin.com/in/jenevaray'>
             <svg
               className="social-svg"
               viewBox="0 0 600 600"
@@ -135,22 +75,6 @@ const Footer = (): JSX.Element => {
           </a>
         </div>
       </div>
-
-      {/* <Row>
-                <Col sm="2"></Col>
-                <Col sm="2">
-                    <a href="https://github.com/JenevaRay"><Github size={96} /></a>
-                </Col>
-                <Col sm="1"></Col>
-                <Col sm="2">
-                    <a href="https://www.linkedin.com/in/jenevaray/"><Linkedin size={96} /></a>
-                </Col>
-                <Col sm="1"></Col>
-                <Col sm="2">
-                    <StackOverflow size={96} />
-                </Col>
-                <Col sm="2"></Col>
-            </Row> */}
     </div>
   );
 };

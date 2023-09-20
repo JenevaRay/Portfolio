@@ -31,7 +31,7 @@ export default function Portfolio(): JSX.Element {
   }, []);
   return (
     <div>
-      <Row lg={2} md={3} sm={4}>
+      <Row lg={2} md={2} sm={1}>
         {data.length > 0 &&
           data
             .filter((repo) => {
@@ -48,25 +48,25 @@ export default function Portfolio(): JSX.Element {
               // for addendum info
               switch (name) {
                 case 'ecommerce-api':
-                  image = './ecommerce-api.png';
+                  image = './Portfolio/ecommerce-api.png';
                   break;
                 case 'employee-tracker':
-                  image = './employee-tracker.png';
+                  image = './Portfolio/employee-tracker.png';
                   break;
                 case 'LuxuryVoyages':
                   homepage = 'http://7.tcp.ngrok.io:20264';
-                  image = './LuxuryVoyages.png';
+                  image = './Portfolio/LuxuryVoyages.png';
                   break;
                 case 'JATE':
                   homepage =
                     'https://tranquil-inlet-98908-e95c48e17247.herokuapp.com';
-                  image = './JATE.png';
+                  image = './Portfolio/JATE.png';
                   break;
                 case 'SuperGreen':
-                  image = './SuperGreen.png';
+                  image = './Portfolio/SuperGreen.png';
                   break;
                 case 'Portfolio':
-                  image = './Portfolio.png';
+                  image = './Portfolio/Portfolio.png';
                   break;
                 default:
               }

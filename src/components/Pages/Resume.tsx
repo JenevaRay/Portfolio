@@ -1,5 +1,10 @@
 import React from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
+import Row from 'react-bootstrap/Row'
+import Card from 'react-bootstrap/Card'
+
+// I might eventually migrate to just rendering my PDFs from scratch.
+// import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer'
 
 const FrontEndProficiencies = [
   'HTML',
@@ -44,11 +49,40 @@ function makeTitledList(title: String, list: String[]): JSX.Element {
 }
 
 export default function Resume(): JSX.Element {
+  const resume = "./Portfolio/helloworld.pdf"
   return (
     <div className="py-5">
       <h2>Resume</h2>
+      <Row>
+        <Card style={{ 
+          backgroundColor: '#d9dbda',
+          margin: 10,
+          float: 'left',
+          overflow: 'hidden',
+          position: 'relative',
+          textAlign: 'center',
+          boxShadow: "1px 1px 2px #e6e6e6",
+          cursor: 'default',
+          background: '#fff',
+          padding: '0',
+          height: 'auto'
+        }} className="view">
+          <embed src={resume} width="100%" height='400px' type="application/pdf" />
+          {/* <Document>
+            <Page size="LETTER" style={pdfStyleSheet.page}>
+              <View style={pdfStyleSheet.section}>
+                <Text>Jeneva Ray</Text>
+              </View>
+              <View style={pdfStyleSheet.section}>
+                <Text>References</Text>
+              </View>
+            </Page>
+          </Document> */}
+        </Card>
+      </Row>
+
       <p>
-        Download my <a href="#resume">Resume</a>
+        Download my <a href={resume}>Resume</a>
       </p>
       <div>
         {makeTitledList('Front End Proficiencies', FrontEndProficiencies)}

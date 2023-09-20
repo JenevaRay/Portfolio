@@ -1,27 +1,30 @@
 import React from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row'
+
 export default function AboutMe(): JSX.Element {
-  const imgstyle = {
-    top: '-50px',
-    bottom: '-50px',
-    zIndex: '999',
-    cursor: 'pointer',
-    transitionProperty: 'all',
-    transitionDuration: '0.3s',
-    transitionTimingFunction: 'ease',
-    width: '100%',
-    display: 'block',
-    // maxHeight: "200px",
-    ObjectFit: 'cover',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-  };
   return (
     <div className="py-5">
       <h1>Jeneva Ray</h1>
-      <img src="./selfie.png" style={imgstyle} className="py-5"></img>
+      <Row>
+        <Card style={{ 
+          backgroundColor: '#d9dbda',
+          margin: 10,
+          float: 'left',
+          overflow: 'hidden',
+          position: 'relative',
+          textAlign: 'center',
+          boxShadow: "1px 1px 2px #e6e6e6",
+          cursor: 'default',
+          background: '#fff',
+          padding: '0'
+        }} className="view">
+          <Card.Img variant="top" src='./Portfolio/selfie.png' />
+        </Card>
+      </Row>
+      {/* <img src="./Portfolio/selfie.png" style={imgstyle} className="py-5" /> */}
       <ListGroup>
         <ListGroup.Item as="li" variant="forest" key={1}>
           Needing precision work? I&apos;ll take it on. I come from a background
@@ -33,10 +36,10 @@ export default function AboutMe(): JSX.Element {
         </ListGroup.Item>
         <ListGroup.Item as="li" variant="forest" key={3}>
           I have experience with analysis from data analysis to formal analysis
-          (a higher tier from static analysis)
+          (a higher tier from static analysis, used by DARPA)
         </ListGroup.Item>
         <ListGroup.Item as="li" variant="forest" key={4}>
-          I have experience with Cassandra NoSQL and administration, data
+          I have experience with Cassandra NoSQL, Mongo NoSQL, administration thereof, data
           parsers for very different information for information sources, use
           and storage
         </ListGroup.Item>

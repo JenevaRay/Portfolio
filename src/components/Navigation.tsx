@@ -1,12 +1,12 @@
 import React from 'react';
 import { useAppSelector } from '../redux/hooks';
 import { Contact, Portfolio, Resume, AboutMe } from './Pages';
+// import { pageActions } from '../redux/page/slice';
 
 function Navigation(): JSX.Element {
   const style = {
     backgroundColor: '#003b1b',
     color: 'white',
-    // height: window.innerHeight
   };
   const innerClasses = 'mx-auto my-auto w-75';
 
@@ -14,15 +14,14 @@ function Navigation(): JSX.Element {
 
   const renderPage = (): any => {
     switch (page) {
-      case 'About Me':
+      case 'about me':
         return <AboutMe />;
-      case 'Contact':
+      case 'contact':
         return <Contact />;
-      case 'Resume':
+      case 'resume':
         return <Resume />;
-      case undefined:
-        console.log(window.location.pathname);
-        return <Portfolio />;
+      case 'portfolio':
+        return <Portfolio />
       default:
         return <Portfolio />;
     }

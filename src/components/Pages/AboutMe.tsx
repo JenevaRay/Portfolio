@@ -21,10 +21,10 @@ export default function AboutMe(): JSX.Element {
           background: '#fff',
           padding: '0'
         }} className="view">
-          <Card.Img variant="top" src='./Portfolio/selfie.png' />
+          <Card.Img variant="top" src='./selfie.png' />
         </Card>
       </Row>
-      {/* <img src="./Portfolio/selfie.png" style={imgstyle} className="py-5" /> */}
+      {/* <img src="./selfie.png" style={imgstyle} className="py-5" /> */}
       <ListGroup>
         <ListGroup.Item as="li" variant="forest" key={1}>
           Needing precision work? I&apos;ll take it on. I come from a background

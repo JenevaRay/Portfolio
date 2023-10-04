@@ -49,7 +49,7 @@ function makeTitledList(title: String, list: String[]): JSX.Element {
 }
 
 export default function Resume(): JSX.Element {
-  const resume = "./Portfolio/helloworld.pdf"
+  const resume = "./helloworld.pdf"
   return (
     <div className="py-5">
       <h2>Resume</h2>

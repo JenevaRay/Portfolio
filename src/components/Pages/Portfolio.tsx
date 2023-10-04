@@ -47,26 +47,29 @@ export default function Portfolio(): JSX.Element {
               let homepage = item.homepage;
               // for addendum info
               switch (name) {
+                case 'Codeathon':
+                  image = './Codeathon.png';
+                  break;
                 case 'ecommerce-api':
-                  image = './Portfolio/ecommerce-api.png';
+                  image = './ecommerce-api.png';
                   break;
                 case 'employee-tracker':
-                  image = './Portfolio/employee-tracker.png';
+                  image = './employee-tracker.png';
                   break;
                 case 'LuxuryVoyages':
                   homepage = 'http://7.tcp.ngrok.io:20264';
-                  image = './Portfolio/LuxuryVoyages.png';
+                  image = './LuxuryVoyages.png';
                   break;
                 case 'JATE':
                   homepage =
                     'https://tranquil-inlet-98908-e95c48e17247.herokuapp.com';
-                  image = './Portfolio/JATE.png';
+                  image = './JATE.png';
                   break;
                 case 'SuperGreen':
-                  image = './Portfolio/SuperGreen.png';
+                  image = './SuperGreen.png';
                   break;
                 case 'Portfolio':
-                  image = './Portfolio/Portfolio.png';
+                  image = './Portfolio.png';
                   break;
                 default:
               }
